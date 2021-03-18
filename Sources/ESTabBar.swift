@@ -158,6 +158,12 @@ open class ESTabBar: UITabBar {
         return b
     }
     
+    open override func sizeThatFits(_ size: CGSize) -> CGSize {
+        var size = super.sizeThatFits(size)
+        size.height+=12
+        return size
+    }
+    
 }
 
 internal extension ESTabBar /* Layout */ {
